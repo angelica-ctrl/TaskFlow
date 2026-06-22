@@ -10,7 +10,9 @@ import {
 
 export default function App() {
   const [task, setTask] = useState("");
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState<
+    Array<{ id: string; title: string; completed: boolean }>
+  >([]);
 
   useEffect(() => {
     console.log("Component mounted!");
